@@ -3,12 +3,12 @@ var User = require("../user");
 
 const DEFAULT_PERMISSIONS = {
     seeplaylist: -1,          // See the playlist
-    playlistadd: 1.5,         // Add video to the playlist
-    playlistnext: 1.5,        // Add a video next on the playlist
-    playlistmove: 1.5,        // Move a video on the playlist
+    playlistadd: 0,         // Add video to the playlist
+    playlistnext: 1,        // Add a video next on the playlist
+    playlistmove: 2,        // Move a video on the playlist
     playlistdelete: 2,        // Delete a video from the playlist
     playlistjump: 1.5,        // Start a different video on the playlist
-    playlistaddlist: 1.5,     // Add a list of videos to the playlist
+    playlistaddlist: 2,     // Add a list of videos to the playlist
     oplaylistadd: -1,         // Same as above, but for open (unlocked) playlist
     oplaylistnext: 1.5,
     oplaylistmove: 1.5,
@@ -356,35 +356,35 @@ PermissionsModule.prototype.canExceedMaxItemsPerUser = function (actor) {
 
 PermissionsModule.prototype.loadUnregistered = function () {
     var perms = {
-        seeplaylist: -1,
-        playlistadd: -1,      // Add video to the playlist
-        playlistnext: 0,
-        playlistmove: 0,      // Move a video on the playlist
-        playlistdelete: 0,    // Delete a video from the playlist
-        playlistjump: 0,      // Start a different video on the playlist
-        playlistaddlist: 0,   // Add a list of videos to the playlist
-        oplaylistadd: -1,     // Same as above, but for open (unlocked) playlist
-        oplaylistnext: 0,
-        oplaylistmove: 0,
-        oplaylistdelete: 0,
-        oplaylistjump: 0,
-        oplaylistaddlist: 0,
-        playlistaddcustom: 0, // Add custom embed to the playlist
-        playlistaddlive: 0,   // Add a livestream to the playlist
-        exceedmaxlength: 0,   // Add a video longer than the maximum length set
-        addnontemp: 0,        // Add a permanent video to the playlist
-        settemp: 0,           // Toggle temporary status of a playlist item
-        playlistshuffle: 0,   // Shuffle the playlist
-        playlistclear: 0,     // Clear the playlist
-        pollctl: 0,           // Open/close polls
-        pollvote: -1,         // Vote in polls
-        viewhiddenpoll: 1.5,  // View results of hidden polls
-        voteskip: -1,         // Vote to skip the current video
+        seeplaylist: 5,
+        playlistadd: 5,      // Add video to the playlist
+        playlistnext: 5,
+        playlistmove: 5,      // Move a video on the playlist
+        playlistdelete: 5,    // Delete a video from the playlist
+        playlistjump: 5,      // Start a different video on the playlist
+        playlistaddlist: 5,   // Add a list of videos to the playlist
+        oplaylistadd: 5,     // Same as above, but for open (unlocked) playlist
+        oplaylistnext: 5,
+        oplaylistmove: 5,
+        oplaylistdelete: 5,
+        oplaylistjump: 5,
+        oplaylistaddlist: 5,
+        playlistaddcustom: 5, // Add custom embed to the playlist
+        playlistaddlive: 5,   // Add a livestream to the playlist
+        exceedmaxlength: 5,   // Add a video longer than the maximum length set
+        addnontemp: 5,        // Add a permanent video to the playlist
+        settemp: 5,           // Toggle temporary status of a playlist item
+        playlistshuffle: 5,   // Shuffle the playlist
+        playlistclear: 5,     // Clear the playlist
+        pollctl: 5,           // Open/close polls
+        pollvote: 5,         // Vote in polls
+        viewhiddenpoll: 5,  // View results of hidden polls
+        voteskip: 5,         // Vote to skip the current video
         viewvoteskip: 1.5,    // View voteskip results
         playlistlock: 2,      // Lock/unlock the playlist
         leaderctl: 0,         // Give/take leader
         drink: 0,             // Use the /d command
-        chat: 0,              // Send chat messages
+        chat: 5,              // Send chat messages
         chatclear: 2,         // Use the /clear command
         exceedmaxitems: 2,    // Exceed max items per user
         deletefromchannellib: 2
